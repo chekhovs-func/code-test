@@ -1,3 +1,3 @@
-export default function ListItem({ index }) {
-  return <li>{index}</li>;
+export default function ListItem({ pokemon }) {
+  return <li id='list-content'>{pokemon.name}</li>;
 }
