@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main id='app-container'>
+    <section id='home-container'>
       <SearchBar
         setSearchInput={setSearchInput}
         setSearchResults={setSearchResults}
