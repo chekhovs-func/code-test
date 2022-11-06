@@ -40,6 +40,6 @@ export default function Home() {
               </Link>
             ))}
       </List>
-    </main>
+    </section>
   );
 }
