@@ -1,3 +1,3 @@
 # code-test
 
-[Link to deployment](code-test-nvjp2uug1-chekhovs-func.vercel.app)
+[Link to deployment](https://code-test-alpha.vercel.app/)
