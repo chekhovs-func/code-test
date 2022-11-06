@@ -1,7 +1,7 @@
 export default function SearchBar({ setSearchInput, setSearchResults, apiResponse, searchInput, searchResults }) {
   const onChangeHandler = e => {
     setSearchInput(e.target.value);
-    setSearchResults(apiResponse.filter(pokemon => pokemon.name.includes(searchInput)));
+    setSearchResults(apiResponse.filter(pokemon => pokemon.name.includes(searchInput.toLowerCase())));
   };
 
   return (
