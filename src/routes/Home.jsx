@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchBar from '../components/SearchBar';
 import List from '../components/List';
+import { Link } from 'react-router-dom';
 import ListItem from '../components/ListItem';
 import { v4 as uuid } from 'uuid';
 
@@ -28,8 +29,16 @@ export default function Home() {
       />
       <List>
         {!searchInput
-          ? apiResponse.map(pokemon => <ListItem key={uuid()} pokemon={pokemon} />)
-          : searchResults.map(pokemon => <ListItem key={uuid()} pokemon={pokemon} />)}
+          ? apiResponse.map(pokemon => (
+              <Link to={`/${pokemon.name}`} key={uuid()}>
+                <ListItem pokemon={pokemon} />
+              </Link>
+            ))
+          : searchResults.map(pokemon => (
+              <Link to={`/${pokemon.name}`} key={uuid()}>
+                <ListItem pokemon={pokemon} />
+              </Link>
+            ))}
       </List>
     </main>
   );
