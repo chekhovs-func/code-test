@@ -4,5 +4,7 @@ export default function SearchBar({ setSearchInput, setSearchResults, apiRespons
     setSearchResults(apiResponse.filter(pokemon => pokemon.name.includes(searchInput)));
   };
 
-  return <input id='search-bar' type='text' placeholder='type to search...' value={searchInput} onChange={e => onChangeHandler(e)} />;
+  return (
+    <input id='search-bar' className='mt-4' type='text' placeholder='type to search...' value={searchInput} onChange={e => onChangeHandler(e)} />
+  );
 }

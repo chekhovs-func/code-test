@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section id='home-container'>
+    <section id='home-container' className='w-1/3'>
       <SearchBar
         setSearchInput={setSearchInput}
         setSearchResults={setSearchResults}
